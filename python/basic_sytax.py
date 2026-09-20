@@ -20,3 +20,8 @@ print(100) #yes it is working
 # print(30 * "#")
 print(30 * "#", "\n", "adding my comments" , "\n" , 30 * "#")
 
+# by default print() function will print in new line but you can change it by using end parameter
+print("first value", end=' ')
+print("second value", end=' ')  
+
+

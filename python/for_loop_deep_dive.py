@@ -68,7 +68,8 @@ for number in range(1, 11):
 # 6. enumerate() gives both the position and the item.
 print("\n6. enumerate()")
 fruits = ["apple", "banana", "orange"]
-for position, fruit in enumerate(fruits, start=1):
+for position, fruit in enumerate(fruits, start=10):
+# for position, fruit in enumerate(fruits):
     print(position, fruit)
 
 
