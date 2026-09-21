@@ -58,3 +58,9 @@ Result:
 14 Leaf
 15 Root
 */
+
+SELECT N, CASE WHEN P IS NULL THEN 'Root'
+               WHEN NOT EXISTS ( SELECT 1 FROM BST B2 WHERE B2.P = B1.N ) THEN 'Leaf' 
+               ELSE 'Inner' END 
+  FROM BST B1 
+ ORDER BY N;
