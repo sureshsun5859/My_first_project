@@ -75,3 +75,40 @@ print(my_list[1] is text)  # May be True: same object
 
 print(id(my_list[1])) # Memory location of the string in the list
 print(id(text))  # Memory location of the string variable
+
+# estimate the list's allocated and reserved reference slots
+import struct
+
+empty_list_size = sys.getsizeof([])
+pointer_size = struct.calcsize("P")
+
+print(f"\n Empty list size: {empty_list_size} bytes")
+print(f"\n Pointer size: {pointer_size} bytes")
+
+allocated_slots = (
+    sys.getsizeof(my_list) - empty_list_size
+) // pointer_size
+
+reserved_slots = allocated_slots - len(my_list)
+
+print(f"Used slots: {len(my_list)}")
+print(f"Allocated slots: {allocated_slots}")
+print(f"Reserved slots: {reserved_slots}")
+print(f"Reserved bytes: {reserved_slots * pointer_size}")
+
+# observe how list capacity grows as elements are appended
+items = []
+previous_size = sys.getsizeof(items)
+
+print(f"Initial size: {previous_size} bytes")
+
+for number in range(20):
+    items.append(number)
+    current_size = sys.getsizeof(items)
+    print(f"\n Appended {number}: size={current_size} bytes")
+    if current_size != previous_size:
+        print(
+            f"length={len(items)}, "
+            f"memory={current_size} bytes"
+        )
+        previous_size = current_size

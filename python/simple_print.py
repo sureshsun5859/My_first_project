@@ -25,6 +25,15 @@ print(  my_list[12]["name"])
 print(type((1,2,3)))
 
 
+import decimal
 import math 
 number = 16
 print(int(math.sqrt(number)))
+
+x = 4
+y = 5
+
+print("x = y?", x == y)
+print("x < y?", x < y)
+
+print(decimal(id(x)))
