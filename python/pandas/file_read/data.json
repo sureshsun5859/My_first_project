@@ -1,0 +1,24 @@
+[
+    {
+        "ID": 10,
+        "NAME": "suresh",
+        "LOCATION": "chennai"
+    },
+    {
+        "ID": 20,
+        "NAME": "ramesh",
+        "LOCATION": "hyderabad"
+    },
+    {
+        "ID": 30,
+        "NAME": "mahi",
+        "LOCATION": "Bangalore"
+    },
+    {
+        "ID": 40,
+        "NAME": "hari",
+        "LOCATION": "nellore"
+    }
+]
+
+

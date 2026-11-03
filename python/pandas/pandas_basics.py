@@ -34,6 +34,9 @@ def main():
     print("\nNew column:")
     print(df)
 
+    #6. select multiple columns
+    print("\nSelected columns:")
+    print(df[["name", "city"]])
 
 if __name__ == "__main__":
     main()

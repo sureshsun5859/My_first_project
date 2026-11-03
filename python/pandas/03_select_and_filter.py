@@ -36,6 +36,14 @@ def main():
     print("\nRows using loc:")
     print(df.loc[1:2])
 
+    # Select columns using loc.
+    print("\nColumns using loc:")
+    print(df.loc[:, ["name", "city"]])
+
+    # select columns using iloc
+    print("\nColumns using iloc:")  
+    print(df.iloc[:, 0:2])
+
 
 if __name__ == "__main__":
     main()
